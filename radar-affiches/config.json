@@ -1,0 +1,12 @@
+{
+  "timezone": "Europe/Paris",
+  "request_delay_seconds": 2,
+  "cinemas": [
+    {
+      "id": 54,
+      "name": "C2L Poissy",
+      "network": "ugc",
+      "pickup": [ { "day": "tuesday", "start": "14:00", "end": "16:00" } ]
+    }
+  ]
+}
