@@ -1,0 +1,84 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e0b10"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon-192.png">
+<title>Radar Affiches</title>
+<style>
+:root{--bg:#0e0b10;--card:#1a151c;--card2:#241c27;--tx:#f4eee6;--mut:#a79cae;--gold:#f2c14e;--red:#d7263d;--ok:#3ddc84;--or:#ff9f43}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,sans-serif;padding-bottom:84px}
+header{padding:calc(14px + env(safe-area-inset-top)) 16px 10px;background:linear-gradient(#2a0f18,var(--bg))}
+h1{margin:0;font-size:22px;letter-spacing:.5px}h1 span{color:var(--gold)}.sub{color:var(--mut);font-size:13px;margin-top:2px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;background:var(--ok)}.dot.w{background:var(--or)}.dot.e{background:var(--red)}
+main{padding:0 14px}h2{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin:20px 2px 8px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0}.chip{flex:none;background:var(--card);border-radius:14px;padding:8px 12px;min-width:104px}.chip b{display:block;font-size:20px}.chip small{color:var(--mut)}
+.card{display:flex;gap:12px;background:var(--card);border-radius:16px;padding:10px;margin-bottom:10px;border:1px solid #2c2230}
+.card img,.ph{width:74px;height:104px;object-fit:cover;border-radius:10px;background:var(--card2);flex:none}.ph{display:flex;align-items:center;justify-content:center;font-size:28px}
+.card .b{flex:1;min-width:0}.t{font-weight:700;font-size:16px;overflow-wrap:anywhere}.m{color:var(--mut);font-size:13px;margin:3px 0 8px}
+.badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;background:#3a2410;color:var(--or);margin-bottom:4px}.badge.v{background:#2b2b2b;color:#ccc}.badge.g{background:#143a24;color:var(--ok)}
+button{font:inherit;border:0;border-radius:10px;padding:8px 11px;background:var(--card2);color:var(--tx)}button.p{background:var(--red)}button.g{background:var(--gold);color:#222;font-weight:700}
+.row{display:flex;gap:6px;flex-wrap:wrap}.sm{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:12px;padding:8px 10px;margin-bottom:6px}.sm .t{font-size:14px;font-weight:600;flex:1}
+.empty{color:var(--mut);text-align:center;padding:26px 10px;background:var(--card);border-radius:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.gi{position:relative;aspect-ratio:2/3;border-radius:12px;overflow:hidden;background:var(--card2)}.gi img{width:100%;height:100%;object-fit:cover}.gi span{position:absolute;left:0;right:0;bottom:0;padding:16px 6px 5px;font-size:11px;background:linear-gradient(transparent,#000c)}
+input,textarea,select{width:100%;font:inherit;background:var(--card2);color:var(--tx);border:1px solid #3a2f40;border-radius:10px;padding:10px;margin:4px 0 10px}label{font-size:12px;color:var(--mut)}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#150f18f2;backdrop-filter:blur(10px);border-top:1px solid #2c2230;padding-bottom:env(safe-area-inset-bottom)}
+nav a{flex:1;text-align:center;padding:10px 0 8px;color:var(--mut);font-size:12px}nav a b{display:block;font-size:20px}nav a.on{color:var(--gold)}
+.modal{position:fixed;inset:0;background:#000b;display:none;align-items:flex-end;z-index:9}.modal.on{display:flex}.sheet{background:var(--bg);width:100%;max-height:92vh;overflow:auto;border-radius:20px 20px 0 0;padding:16px 16px 28px}
+.fab{position:fixed;right:16px;bottom:calc(76px + env(safe-area-inset-bottom));border-radius:99px;padding:13px 18px;box-shadow:0 4px 14px #000a}
+.stat{display:flex;gap:8px;margin:8px 0}.stat div{flex:1;background:var(--card);border-radius:12px;padding:10px;text-align:center}.stat b{display:block;font-size:20px;color:var(--gold)}.stat small{color:var(--mut)}
+</style></head><body>
+<header><h1>🎬 Radar <span>Affiches</span></h1><div class="sub" id="status">Chargement…</div></header>
+<main id="main"></main>
+<button class="g fab" id="fab" style="display:none" onclick="edit()">＋ Affiche</button>
+<nav><a href="#radar" id="n-radar"><b>📡</b>Radar</a><a href="#coll" id="n-coll"><b>🖼️</b>Collection</a><a href="#set" id="n-set"><b>⚙️</b>Réglages</a></nav>
+<div class="modal" id="modal" onclick="if(event.target===this)closeM()"><div class="sheet" id="sheet"></div></div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let D=null,S;try{S=JSON.parse(localStorage.getItem("ra_v1"))||{}}catch{S={}}S.fav??=[];S.ign??=[];S.coll??=[];
+const save=()=>{try{localStorage.setItem("ra_v1",JSON.stringify(S));return true}catch{alert("Stockage plein : exporte ta collection (Réglages) et retire des photos.");return false}};
+const DAYS=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const fd=iso=>{const d=new Date(iso+"T12:00");return DAYS[d.getDay()]+" "+d.toLocaleDateString("fr-FR",{day:"numeric",month:"short"})};
+const poster=(p,t)=>p?`<img src="${esc(p)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<div class="ph">🎞️</div>`;
+const got=id=>S.coll.some(c=>c.filmId===id);
+async function load(){try{const r=await fetch("data.json?"+Date.now());D=await r.json()}catch{D=null}render()}
+function status(){if(D&&D.status==="pending")return'<span class="dot w"></span>En attente du premier relevé';if(!D)return'<span class="dot e"></span>Données indisponibles (hors ligne ?)';
+ const h=(Date.now()-new Date(D.updated))/36e5,c=D.status!=="ok"?"e":h>12?"w":"";
+ return`<span class="dot ${c}"></span>${c==="e"?"Dernier relevé en erreur":c==="w"?"Relevé ancien":"Surveillance active"} · ${new Date(D.updated).toLocaleString("fr-FR",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})}`}
+function detCard(d,c){const rec=got(d.film_id),leave=fd(d.leaves),f=S.fav.includes(d.film_id);
+ return`<div class="card">${poster(d.poster)}<div class="b"><span class="badge ${d.status==="🟠"?"":"v"}">${d.status==="🟠"?"🟠 Probablement déprogrammé":"⚪ À vérifier"}</span>${f?" ⭐":""}
+ <div class="t">${esc(d.title)}</div><div class="m">${d.last?"Dernière séance : "+fd(d.last.slice(0,10))+" "+esc(d.last.slice(11)):""}<br>Plus au programme dès ${leave}<br>${esc(d.reason)}</div>
+ <div class="row">${rec?'<span class="badge g">✅ Récupérée</span>':`<button class="g" onclick="edit(null,'${esc(d.film_id)}')">✅ Récupérée</button>`}
+ <button onclick="tog('fav','${esc(d.film_id)}')">${f?"★":"☆"}</button><button onclick="tog('ign','${esc(d.film_id)}')">🚫</button></div></div></div>`}
+function radar(){if(!D||!D.cinemas.length)return'<div class="empty">Pas encore de données.<br>Lance le workflow sur GitHub (onglet Actions).</div>';
+ return D.cinemas.map(c=>{const dets=c.detections.filter(d=>!S.ign.includes(d.film_id)),hot=dets.filter(d=>d.status==="🟠"&&!got(d.film_id)).length,np=c.next_pickup;
+ return`<h2>${esc(c.name)}</h2><div class="chips"><div class="chip"><b>${hot}</b><small>à récupérer</small></div>
+ <div class="chip"><b>${c.films_now.length}</b><small>films cette semaine</small></div>
+ <div class="chip"><b>${np?(np.is_today?"Aujourd'hui":np.day):"–"}</b><small>${np?np.start+"–"+np.end:"créneau"}</small></div></div>
+ <h2>🚨 Affiches potentielles</h2>${dets.length?dets.map(d=>detCard(d,c)).join(""):`<div class="empty">${c.next_week_published?"Aucun film ne semble déprogrammé 🎉":"La programmation de la semaine prochaine n'est pas encore publiée par UGC.<br>Tu seras prévenu dès que ce sera le cas."}</div>`}
+ <h2>À l'affiche cette semaine</h2>${c.films_now.map(f=>`<div class="sm"><span class="t">${esc(f.title)}</span><small style="color:var(--mut)">${f.sessions} séances</small><button onclick="tog('fav','${esc(f.film_id)}')">${S.fav.includes(f.film_id)?"★":"☆"}</button></div>`).join("")}`}).join("")}
+function coll(){const q=($("#q")?.value||"").toLowerCase(),L=[...S.coll].sort((a,b)=>(b.date||"").localeCompare(a.date||"")),F=L.filter(c=>(c.title+c.cinema+(c.note||"")).toLowerCase().includes(q));
+ const yrs=new Set(L.map(c=>(c.date||"").slice(0,4)).filter(Boolean)),cin=new Set(L.map(c=>c.cinema).filter(Boolean));
+ return`<h2>Ma collection</h2><div class="stat"><div><b>${L.length}</b><small>affiches</small></div><div><b>${cin.size}</b><small>cinéma(s)</small></div><div><b>${yrs.size||0}</b><small>année(s)</small></div></div>
+ <input id="q" placeholder="🔎 Rechercher…" oninput="renderColl()" value="${esc(q)}">
+ ${F.length?`<div class="grid">${F.map(c=>`<div class="gi" onclick="edit('${c.id}')">${c.photo?`<img src="${c.photo}">`:poster(c.poster)}<span>${esc(c.title)}</span></div>`).join("")}</div>`:'<div class="empty">Aucune affiche pour l\'instant.<br>Appuie sur « Récupérée » depuis le Radar, ou sur ＋.</div>'}`}
+function renderColl(){const v=$("#q")?.value,p=$("#q")?.selectionStart;$("#main").innerHTML=coll();const i=$("#q");if(i&&v){i.focus();i.setSelectionRange(p,p)}}
+function sett(){const ig=S.ign.map(id=>{const t=D?.cinemas.flatMap(c=>[...c.films_now,...c.detections]).find(f=>f.film_id===id);return`<div class="sm"><span class="t">${esc(t?.title||"Film "+id)}</span><button onclick="tog('ign','${esc(id)}')">Réafficher</button></div>`}).join("");
+ return`<h2>Sauvegarde</h2><p class="sub">Ta collection est stockée sur ce téléphone. Exporte-la de temps en temps.</p><div class="row"><button class="g" onclick="exp()">⬇️ Exporter</button><button onclick="$('#imp').click()">⬆️ Importer</button></div><input type="file" id="imp" accept=".json" style="display:none" onchange="imp(this)">
+ <h2>Films ignorés</h2>${ig||'<div class="empty">Aucun</div>'}<h2>Notifications</h2><p class="sub">Les alertes arrivent via l'app <b>ntfy</b> (abonnement à ton sujet privé). Créneau : ${esc(D?.cinemas[0]?.pickup_text||"–")}. Réglages dans <code>config.json</code> sur GitHub.</p>`}
+function edit(id,filmId){const c=id?S.coll.find(x=>x.id===id):null,d=!c&&filmId?D?.cinemas.flatMap(x=>x.detections.map(y=>({...y,cin:x.name}))).find(y=>y.film_id===filmId):null,v=c||{title:d?.title||"",cinema:d?.cin||D?.cinemas[0]?.name||"",date:new Date().toISOString().slice(0,10),filmId:filmId||"",poster:d?.poster||"",note:"",loc:"",qty:1};
+ $("#sheet").innerHTML=`<h2 style="margin-top:0">${c?"Modifier":"Affiche récupérée"}</h2><label>Film</label><input id="f-t" value="${esc(v.title)}"><label>Cinéma</label><input id="f-c" value="${esc(v.cinema)}"><label>Date de récupération</label><input id="f-d" type="date" value="${esc(v.date)}">
+ <label>Quantité</label><input id="f-q" type="number" min="1" value="${v.qty||1}"><label>Emplacement (tube, classeur…)</label><input id="f-l" value="${esc(v.loc||"")}"><label>Note</label><textarea id="f-n" rows="2">${esc(v.note||"")}</textarea>
+ <label>Photo de l'affiche</label><input id="f-p" type="file" accept="image/*" capture="environment"><div id="pv">${v.photo?`<img src="${v.photo}" style="width:90px;border-radius:8px">`:""}</div>
+ <div class="row" style="margin-top:12px"><button class="g" onclick="saveItem('${c?c.id:""}','${esc(v.filmId||"")}','${esc(v.poster||"")}')">Enregistrer</button><button onclick="closeM()">Annuler</button>${c?`<button onclick="del('${c.id}')" style="margin-left:auto">🗑️</button>`:""}</div>`;
+ window._photo=v.photo||"";$("#f-p").onchange=async e=>{const f=e.target.files[0];if(!f)return;window._photo=await shrink(f);$("#pv").innerHTML=`<img src="${window._photo}" style="width:90px;border-radius:8px">`};$("#modal").classList.add("on")}
+const shrink=f=>new Promise(r=>{const i=new Image;i.onload=()=>{const k=Math.min(1,640/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=i.width*k;c.height=i.height*k;c.getContext("2d").drawImage(i,0,0,c.width,c.height);r(c.toDataURL("image/jpeg",.72))};i.src=URL.createObjectURL(f)});
+function saveItem(id,filmId,pos){const it={id:id||"c"+Date.now(),title:$("#f-t").value.trim()||"Sans titre",cinema:$("#f-c").value.trim(),date:$("#f-d").value,qty:+$("#f-q").value||1,loc:$("#f-l").value,note:$("#f-n").value,photo:window._photo,filmId,poster:pos};
+ const old=[...S.coll];if(id)S.coll=S.coll.map(x=>x.id===id?it:x);else S.coll.push(it);if(!save())S.coll=old;else{closeM();render()}}
+function del(id){if(confirm("Supprimer cette affiche ?")){S.coll=S.coll.filter(x=>x.id!==id);save();closeM();render()}}
+const closeM=()=>$("#modal").classList.remove("on");
+function tog(k,id){const a=S[k],i=a.indexOf(id);i<0?a.push(id):a.splice(i,1);if(k==="ign"&&i<0)S.fav=S.fav.filter(x=>x!==id);save();render()}
+function exp(){const b=new Blob([JSON.stringify(S)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="radar-affiches-sauvegarde.json";a.click()}
+function imp(i){const f=i.files[0];if(!f)return;f.text().then(t=>{try{const j=JSON.parse(t);S={fav:j.fav||[],ign:j.ign||[],coll:j.coll||[]};save();render();alert("Importé ✅")}catch{alert("Fichier invalide")}})}
+function render(){const h=location.hash.slice(1)||"radar";["radar","coll","set"].forEach(k=>$("#n-"+k).classList.toggle("on",k===h));
+ $("#status").innerHTML=status();$("#fab").style.display=h==="coll"?"block":"none";$("#main").innerHTML=h==="coll"?coll():h==="set"?sett():radar()}
+addEventListener("hashchange",render);load();setInterval(load,6e5);
+if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
+</script></body></html>
