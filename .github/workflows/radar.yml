@@ -26,7 +26,7 @@ jobs:
           python - <<'PY'
           import sys
           from radar import notify
-          ok = notify.send("✅ Test Radar Affiches", "GitHub peut bien vous envoyer des notifications.", 3, ["white_check_mark"])
+          ok = notify.send("✅ Test Radar Affiches", "GitHub peut bien vous envoyer des notifications.", 4, ["white_check_mark"])
           sys.exit(0 if ok else 1)
           PY
       - name: Releve + detection + notifications
