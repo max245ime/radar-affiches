@@ -22,16 +22,20 @@ jobs:
         if: ${{ inputs.test_notification }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          PUSH_URL: ${{ secrets.PUSH_URL }}
+          PUSH_SECRET: ${{ secrets.PUSH_SECRET }}
         run: |
           python - <<'PY'
           import sys
           from radar import notify
-          ok = notify.send("✅ Test Radar Affiches", "GitHub peut bien vous envoyer des notifications.", 4, ["white_check_mark"])
+          ok = notify.send("✅ Test Radar Affiches", "GitHub peut bien vous envoyer des notifications.", 3, ["white_check_mark"])
           sys.exit(0 if ok else 1)
           PY
       - name: Releve + detection + notifications
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          PUSH_URL: ${{ secrets.PUSH_URL }}
+          PUSH_SECRET: ${{ secrets.PUSH_SECRET }}
         run: python -m radar.run
       - name: Sauvegarde de l'historique
         run: |
