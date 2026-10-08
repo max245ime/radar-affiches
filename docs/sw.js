@@ -1,4 +1,4 @@
-const C="radar-v2",SHELL=["./","index.html","manifest.json","icon-192.png"];
+const C="radar-v3",SHELL=["./","index.html","manifest.json","icon-192.png","badge-96.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(SHELL)));self.skipWaiting()});
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>clients.claim())));
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(u.origin!==location.origin)return;
@@ -7,6 +7,6 @@ self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(u.origin!==l
 self.addEventListener("push",e=>e.waitUntil((async()=>{
  let m={title:"🎬 Radar Affiches",body:"Nouvelle alerte : ouvre l'app.",url:"./"};
  try{const cfg=await (await fetch("push-config.json?"+Date.now())).json();const r=await fetch(cfg.url+"/last?"+Date.now(),{cache:"no-store"});if(r.ok)m=await r.json()}catch(_){}
- await self.registration.showNotification(m.title,{body:m.body,icon:"icon-192.png",badge:"icon-192.png",tag:"radar",renotify:true,requireInteraction:true,vibrate:[200,100,200],data:{url:m.url||"./"}})})()));
+ await self.registration.showNotification(m.title,{body:m.body,icon:"icon-192.png",badge:"badge-96.png",tag:"radar",renotify:true,requireInteraction:true,vibrate:[200,100,200],data:{url:m.url||"./"}})})()));
 self.addEventListener("notificationclick",e=>{e.notification.close();const u=e.notification.data?.url||"./";
  e.waitUntil(clients.matchAll({type:"window",includeUncontrolled:true}).then(l=>l.length?l[0].focus():clients.openWindow(u)))});
