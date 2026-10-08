@@ -147,8 +147,8 @@ def main():
             errors.append(f"{cin['name']}: {e}")
             print("ERREUR (aucune déprogrammation déduite):", e, file=sys.stderr)
             lo = cs.get("last_ok")
-            if lo and now - datetime.fromisoformat(lo) > timedelta(hours=24) and cs.get("err_notif") != today.isoformat():
-                notify.send("⚠️ Radar Affiches : relevé en échec", f"Plus de relevé réussi pour {cin['name']} depuis 24 h.", 2, ["warning"], app_url)
+            if lo and now - datetime.fromisoformat(lo) > timedelta(hours=12) and cs.get("err_notif") != today.isoformat():
+                notify.send("⚠️ Radar Affiches : relevé en échec", f"Plus de relevé réussi pour {cin['name']} depuis plus de 12 h (UGC injoignable ou format changé).", 2, ["warning"], app_url)
                 cs["err_notif"] = today.isoformat()
     for c in results.values():
         c["last_ok"] = state["cinemas"].get(str(c["id"]), {}).get("last_ok")

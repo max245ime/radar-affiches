@@ -34,21 +34,42 @@ nav a{flex:1;text-align:center;padding:10px 0 8px;color:var(--mut);font-size:12p
 const $=s=>document.querySelector(s),esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let D=null,S;try{S=JSON.parse(localStorage.getItem("ra_v1"))||{}}catch{S={}}S.fav??=[];S.ign??=[];S.coll??=[];
 const save=()=>{try{localStorage.setItem("ra_v1",JSON.stringify(S));return true}catch{alert("Stockage plein : exporte ta collection (Réglages) et retire des photos.");return false}};
+let PUSH="?";
+const b64=s=>{const p="=".repeat((4-s.length%4)%4),r=atob((s+p).replace(/-/g,"+").replace(/_/g,"/"));return Uint8Array.from(r,c=>c.charCodeAt(0))};
+async function pushCfg(){try{const r=await fetch("push-config.json?"+Date.now());const c=await r.json();return c.url&&c.url.startsWith("http")?c:null}catch{return null}}
+async function pushInit(){const c=await pushCfg();if(!c||!("serviceWorker"in navigator)||!("PushManager"in window)||!("Notification"in window)){PUSH=c?"unsupported":"noconfig";render();return}
+ if(Notification.permission==="denied"){PUSH="denied";render();return}
+ const reg=await navigator.serviceWorker.ready,sub=await reg.pushManager.getSubscription();
+ PUSH=sub&&Notification.permission==="granted"?"on":"off";
+ if(PUSH==="on")fetch(c.url+"/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(sub)}).catch(()=>{});
+ render()}
+async function enablePush(){try{const c=await pushCfg();if(!c)return alert("Notifications pas encore configurées (push-config.json).");
+ if(await Notification.requestPermission()!=="granted")return alert("Notifications refusées : autorise-les dans les réglages Android de l'app.");
+ const reg=await navigator.serviceWorker.ready;let sub=await reg.pushManager.getSubscription();
+ if(!sub)sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64(c.publicKey)});
+ const r=await fetch(c.url+"/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(sub)});if(!r.ok)throw new Error("serveur "+r.status);
+ alert("Notifications activées ✅");pushInit()}catch(e){alert("Échec : "+e.message)}}
+const pushCard=()=>PUSH==="off"?'<div class="card" style="align-items:center"><div class="b"><div class="t">🔔 Active les alertes</div><div class="m" style="margin:2px 0 8px">Pour être prévenu quand un film part.</div><button class="g" onclick="enablePush()">Activer les notifications</button></div></div>':PUSH==="denied"?'<div class="empty" style="margin-top:12px">🔕 Notifications bloquées : Réglages Android → Applications → Radar Affiches → Notifications.</div>':"";
 const DAYS=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
 const fd=iso=>{const d=new Date(iso+"T12:00");return DAYS[d.getDay()]+" "+d.toLocaleDateString("fr-FR",{day:"numeric",month:"short"})};
 const poster=(p,t)=>p?`<img src="${esc(p)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<div class="ph">🎞️</div>`;
 const got=id=>S.coll.some(c=>c.filmId===id);
 async function load(){try{const r=await fetch("data.json?"+Date.now());D=await r.json()}catch{D=null}render()}
-function status(){if(D&&D.status==="pending")return'<span class="dot w"></span>En attente du premier relevé';if(!D)return'<span class="dot e"></span>Données indisponibles (hors ligne ?)';
- const h=(Date.now()-new Date(D.updated))/36e5,c=D.status!=="ok"?"e":h>12?"w":"";
- return`<span class="dot ${c}"></span>${c==="e"?"Dernier relevé en erreur":c==="w"?"Relevé ancien":"Surveillance active"} · ${new Date(D.updated).toLocaleString("fr-FR",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})}`}
+function health(){if(!D)return{l:"e"};if(D.status==="pending")return{l:"p"};
+ const t=(D.cinemas||[]).map(c=>Date.parse(c.last_ok)).filter(Number.isFinite),last=t.length?Math.min(...t):Date.parse(D.updated),age=(Date.now()-last)/36e5;
+ return{l:age>13?"e":(D.status==="error"||age>6)?"w":"ok",last,age}}
+const ago=h=>h<1?"à l'instant":h<24?"il y a "+Math.round(h)+" h":"il y a "+Math.round(h/24)+" j";
+function status(){const h=health();if(h.l==="p")return'<span class="dot w"></span>En attente du premier relevé';if(h.l==="e"&&!h.last)return'<span class="dot e"></span>Données indisponibles (hors ligne ?)';
+ const d=new Date(h.last).toLocaleString("fr-FR",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+ return`<span class="dot ${h.l==="ok"?"":h.l}"></span>${h.l==="e"?"⚠️ Surveillance en panne ?":h.l==="w"?"Relevé en retard":"Surveillance active"} · dernier relevé réussi : ${d} (${ago(h.age)})`}
+const healthCard=()=>{const h=health();return h.l==="e"&&h.last?'<div class="card" style="border-color:var(--red)"><div class="b"><div class="t">⚠️ Plus de relevé réussi depuis '+Math.round(h.age)+' h</div><div class="m" style="margin:2px 0 0">Les affiches affichées ici peuvent être périmées. Préviens Claude.</div></div></div>':""};
 function detCard(d,c){const rec=got(d.film_id),leave=fd(d.leaves),f=S.fav.includes(d.film_id);
  return`<div class="card">${poster(d.poster)}<div class="b"><span class="badge ${d.status==="🟠"?"":"v"}">${d.status==="🟠"?"🟠 Probablement déprogrammé":"⚪ À vérifier"}</span>${f?" ⭐":""}
  <div class="t">${esc(d.title)}</div><div class="m">${d.last?"Dernière séance : "+fd(d.last.slice(0,10))+" "+esc(d.last.slice(11)):""}<br>Plus au programme dès ${leave}<br>${esc(d.reason)}</div>
  <div class="row">${rec?'<span class="badge g">✅ Récupérée</span>':`<button class="g" onclick="edit(null,'${esc(d.film_id)}')">✅ Récupérée</button>`}
  <button onclick="tog('fav','${esc(d.film_id)}')">${f?"★":"☆"}</button><button onclick="tog('ign','${esc(d.film_id)}')">🚫</button></div></div></div>`}
-function radar(){if(!D||!D.cinemas.length)return'<div class="empty">Pas encore de données.<br>Lance le workflow sur GitHub (onglet Actions).</div>';
- return D.cinemas.map(c=>{const dets=c.detections.filter(d=>!S.ign.includes(d.film_id)),hot=dets.filter(d=>d.status==="🟠"&&!got(d.film_id)).length,np=c.next_pickup;
+function radar(){if(!D||!D.cinemas.length)return pushCard()+'<div class="empty">Pas encore de données.<br>Lance le workflow sur GitHub (onglet Actions).</div>';
+ return healthCard()+pushCard()+D.cinemas.map(c=>{const dets=c.detections.filter(d=>!S.ign.includes(d.film_id)),hot=dets.filter(d=>d.status==="🟠"&&!got(d.film_id)).length,np=c.next_pickup;
  return`<h2>${esc(c.name)}</h2><div class="chips"><div class="chip"><b>${hot}</b><small>à récupérer</small></div>
  <div class="chip"><b>${c.films_now.length}</b><small>films cette semaine</small></div>
  <div class="chip"><b>${np?(np.is_today?"Aujourd'hui":np.day):"–"}</b><small>${np?np.start+"–"+np.end:"créneau"}</small></div></div>
@@ -62,7 +83,7 @@ function coll(){const q=($("#q")?.value||"").toLowerCase(),L=[...S.coll].sort((a
 function renderColl(){const v=$("#q")?.value,p=$("#q")?.selectionStart;$("#main").innerHTML=coll();const i=$("#q");if(i&&v){i.focus();i.setSelectionRange(p,p)}}
 function sett(){const ig=S.ign.map(id=>{const t=D?.cinemas.flatMap(c=>[...c.films_now,...c.detections]).find(f=>f.film_id===id);return`<div class="sm"><span class="t">${esc(t?.title||"Film "+id)}</span><button onclick="tog('ign','${esc(id)}')">Réafficher</button></div>`}).join("");
  return`<h2>Sauvegarde</h2><p class="sub">Ta collection est stockée sur ce téléphone. Exporte-la de temps en temps.</p><div class="row"><button class="g" onclick="exp()">⬇️ Exporter</button><button onclick="$('#imp').click()">⬆️ Importer</button></div><input type="file" id="imp" accept=".json" style="display:none" onchange="imp(this)">
- <h2>Films ignorés</h2>${ig||'<div class="empty">Aucun</div>'}<h2>Notifications</h2><p class="sub">Les alertes arrivent via l'app <b>ntfy</b> (abonnement à ton sujet privé). Créneau : ${esc(D?.cinemas[0]?.pickup_text||"–")}. Réglages dans <code>config.json</code> sur GitHub.</p>`}
+ <h2>Films ignorés</h2>${ig||'<div class="empty">Aucun</div>'}<h2>Notifications</h2><p class="sub">État : ${{on:"✅ activées sur ce téléphone",off:"⚪ non activées",denied:"🔕 bloquées par Android",unsupported:"❌ non supportées ici",noconfig:"⚙️ serveur non configuré","?":"…"}[PUSH]}<br>Créneau : ${esc(D?.cinemas[0]?.pickup_text||"–")}.</p>${PUSH==="off"?'<button class="g" onclick="enablePush()">🔔 Activer les notifications</button>':""}`}
 function edit(id,filmId){const c=id?S.coll.find(x=>x.id===id):null,d=!c&&filmId?D?.cinemas.flatMap(x=>x.detections.map(y=>({...y,cin:x.name}))).find(y=>y.film_id===filmId):null,v=c||{title:d?.title||"",cinema:d?.cin||D?.cinemas[0]?.name||"",date:new Date().toISOString().slice(0,10),filmId:filmId||"",poster:d?.poster||"",note:"",loc:"",qty:1};
  $("#sheet").innerHTML=`<h2 style="margin-top:0">${c?"Modifier":"Affiche récupérée"}</h2><label>Film</label><input id="f-t" value="${esc(v.title)}"><label>Cinéma</label><input id="f-c" value="${esc(v.cinema)}"><label>Date de récupération</label><input id="f-d" type="date" value="${esc(v.date)}">
  <label>Quantité</label><input id="f-q" type="number" min="1" value="${v.qty||1}"><label>Emplacement (tube, classeur…)</label><input id="f-l" value="${esc(v.loc||"")}"><label>Note</label><textarea id="f-n" rows="2">${esc(v.note||"")}</textarea>
@@ -79,6 +100,6 @@ function exp(){const b=new Blob([JSON.stringify(S)],{type:"application/json"}),a
 function imp(i){const f=i.files[0];if(!f)return;f.text().then(t=>{try{const j=JSON.parse(t);S={fav:j.fav||[],ign:j.ign||[],coll:j.coll||[]};save();render();alert("Importé ✅")}catch{alert("Fichier invalide")}})}
 function render(){const h=location.hash.slice(1)||"radar";["radar","coll","set"].forEach(k=>$("#n-"+k).classList.toggle("on",k===h));
  $("#status").innerHTML=status();$("#fab").style.display=h==="coll"?"block":"none";$("#main").innerHTML=h==="coll"?coll():h==="set"?sett():radar()}
-addEventListener("hashchange",render);load();setInterval(load,6e5);
+addEventListener("hashchange",render);load();pushInit();setInterval(load,6e5);
 if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
 </script></body></html>
