@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T15:16+02:00",
+ "updated": "2026-10-09T22:06+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -56,7 +56,7 @@
      "film_id": "18235",
      "title": "HEART OF THE BEAST",
      "sessions": 17,
-     "poster": "https://www.ugc.fr/dynamique/films/35/18235/fr/poster/large/6faf7d9aa879bd9374e773f31db44956_16.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/35/18235/fr/poster/large/6faf7d9aa879bd9374e773f31db44956_18.jpg",
      "url": "https://www.ugc.fr/film_heart_of_the_beast_18235.html"
     },
     {
@@ -111,7 +111,7 @@
    ],
    "films_total": 28,
    "detections": [],
-   "last_ok": "2026-10-09T15:16+02:00"
+   "last_ok": "2026-10-09T22:06+02:00"
   }
  ]
 }
