@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T14:49+02:00",
+ "updated": "2026-10-11T21:33+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -109,9 +109,9 @@
      "url": "https://www.ugc.fr/film_les_extraordinaires_aventures_de_morph_17294.html"
     }
    ],
-   "films_total": 28,
+   "films_total": 29,
    "detections": [],
-   "last_ok": "2026-10-11T14:49+02:00"
+   "last_ok": "2026-10-11T21:33+02:00"
   }
  ]
 }
