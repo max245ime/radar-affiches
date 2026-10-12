@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T02:32+02:00",
+ "updated": "2026-10-12T17:24+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -22,7 +22,7 @@
     "is_today": false
    },
    "week_start": "2026-10-07",
-   "next_week_published": false,
+   "next_week_published": true,
    "films_now": [
     {
      "film_id": "17493",
@@ -109,9 +109,70 @@
      "url": "https://www.ugc.fr/film_les_extraordinaires_aventures_de_morph_17294.html"
     }
    ],
-   "films_total": 29,
-   "detections": [],
-   "last_ok": "2026-10-12T02:32+02:00"
+   "films_total": 32,
+   "detections": [
+    {
+     "film_id": "18404",
+     "title": "PRIMETIME",
+     "url": "https://www.ugc.fr/film_primetime_18404.html",
+     "poster": "https://www.ugc.fr/dynamique/films/04/18404/fr/poster/large/b2335224732f2a74fd22019277712f13_13.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 6,
+     "last": "2026-10-13 17:40",
+     "leaves": "2026-10-14",
+     "detected": "2026-10-12T17:24+02:00"
+    },
+    {
+     "film_id": "9004",
+     "title": "HUNGER GAMES",
+     "url": "https://www.ugc.fr/film_hunger_games_9004.html",
+     "poster": "https://www.ugc.fr/dynamique/films/04/9004/fr/poster/large/110cf16404f5660a06ce3f707a4b3efc_14.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-11 17:30",
+     "leaves": "2026-10-14",
+     "detected": "2026-10-12T17:24+02:00"
+    },
+    {
+     "film_id": "17771",
+     "title": "LA LEGENDE DE BAAHUBALI, L'EPOPEE - DIRECTOR'S CUT",
+     "url": "https://www.ugc.fr/film_la_legende_de_baahubali_l_epopee_director_s_cut_17771.html",
+     "poster": "https://www.ugc.fr/dynamique/films/71/17771/fr/poster/large/157cd73e355d544d1c4fd6af8fee6419_8.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-08 18:50",
+     "leaves": "2026-10-14",
+     "detected": "2026-10-12T17:24+02:00"
+    },
+    {
+     "film_id": "17294",
+     "title": "LES EXTRAORDINAIRES AVENTURES DE MORPH",
+     "url": "https://www.ugc.fr/film_les_extraordinaires_aventures_de_morph_17294.html",
+     "poster": "https://www.ugc.fr/dynamique/films/94/17294/fr/poster/large/3ea28ecef0c1b1ba6982c8eea92c1493_10.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-11 11:00",
+     "leaves": "2026-10-14",
+     "detected": "2026-10-12T17:24+02:00"
+    },
+    {
+     "film_id": "13616",
+     "title": "VOYAGES A DEUX",
+     "url": "https://www.ugc.fr/film_voyages_a_deux_13616.html",
+     "poster": "https://www.ugc.fr/dynamique/films/16/13616/fr/poster/large/0815718_4.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-09 20:00",
+     "leaves": "2026-10-14",
+     "detected": "2026-10-12T17:24+02:00"
+    }
+   ],
+   "last_ok": "2026-10-12T17:24+02:00"
   }
  ]
 }
