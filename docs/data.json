@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T17:24+02:00",
+ "updated": "2026-10-13T02:39+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -19,7 +19,7 @@
     "day": "mardi",
     "start": "14:00",
     "end": "16:00",
-    "is_today": false
+    "is_today": true
    },
    "week_start": "2026-10-07",
    "next_week_published": true,
@@ -172,7 +172,7 @@
      "detected": "2026-10-12T17:24+02:00"
     }
    ],
-   "last_ok": "2026-10-12T17:24+02:00"
+   "last_ok": "2026-10-13T02:39+02:00"
   }
  ]
 }
