@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T13:28+02:00",
+ "updated": "2026-10-15T18:59+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -123,7 +123,7 @@
      "url": "https://www.ugc.fr/film_colargol_et_le_cirque_pimoulu_17293.html"
     }
    ],
-   "films_total": 33,
+   "films_total": 39,
    "detections": [
     {
      "film_id": "18404",
@@ -186,7 +186,7 @@
      "detected": "2026-10-12T17:24+02:00"
     }
    ],
-   "last_ok": "2026-10-15T13:28+02:00"
+   "last_ok": "2026-10-15T18:59+02:00"
   }
  ]
 }
