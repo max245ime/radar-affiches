@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T23:40+02:00",
+ "updated": "2026-10-15T13:28+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -63,7 +63,7 @@
      "film_id": "17951",
      "title": "MOCHY",
      "sessions": 11,
-     "poster": "https://www.ugc.fr/dynamique/films/51/17951/fr/poster/large/2e292d36aa0d7fc0efb2e1d08578357d_19.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/51/17951/fr/poster/large/2e292d36aa0d7fc0efb2e1d08578357d_21.jpg",
      "url": "https://www.ugc.fr/film_mochy_17951.html"
     },
     {
@@ -186,7 +186,7 @@
      "detected": "2026-10-12T17:24+02:00"
     }
    ],
-   "last_ok": "2026-10-14T23:40+02:00"
+   "last_ok": "2026-10-15T13:28+02:00"
   }
  ]
 }
