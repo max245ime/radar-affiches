@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T23:42+02:00",
+ "updated": "2026-10-22T13:51+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -105,7 +105,7 @@
      "film_id": "9706",
      "title": "LE REVE DE GALILEO",
      "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/06/9706/fr/poster/large/19801748_6.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/06/9706/fr/poster/large/19801748_7.jpg",
      "url": "https://www.ugc.fr/film_le_reve_de_galileo_9706.html"
     },
     {
@@ -227,7 +227,7 @@
      "detected": "2026-10-19T22:35+02:00"
     }
    ],
-   "last_ok": "2026-10-21T23:42+02:00"
+   "last_ok": "2026-10-22T13:51+02:00"
   }
  ]
 }
