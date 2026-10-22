@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T19:10+02:00",
+ "updated": "2026-10-22T23:35+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -112,7 +112,7 @@
      "film_id": "17492",
      "title": "LE FANTOME DE L'OPERA",
      "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/92/17492/fr/poster/large/9e85825c32a9d2be8135074c9e45c870_15.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/92/17492/fr/poster/large/9e85825c32a9d2be8135074c9e45c870_16.jpg",
      "url": "https://www.ugc.fr/film_le_fantome_de_l_opera_17492.html"
     }
    ],
@@ -227,7 +227,7 @@
      "detected": "2026-10-19T22:35+02:00"
     }
    ],
-   "last_ok": "2026-10-22T19:10+02:00"
+   "last_ok": "2026-10-22T23:35+02:00"
   }
  ]
 }
