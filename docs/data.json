@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T19:06+02:00",
+ "updated": "2026-10-23T23:24+02:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -35,7 +35,7 @@
      "film_id": "17498",
      "title": "KARMA",
      "sessions": 22,
-     "poster": "https://www.ugc.fr/dynamique/films/98/17498/fr/poster/large/940afff3ed3b09677bf94e2bc7c3009b_25.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/98/17498/fr/poster/large/940afff3ed3b09677bf94e2bc7c3009b_26.jpg",
      "url": "https://www.ugc.fr/film_karma_17498.html"
     },
     {
@@ -227,7 +227,7 @@
      "detected": "2026-10-19T22:35+02:00"
     }
    ],
-   "last_ok": "2026-10-23T19:06+02:00"
+   "last_ok": "2026-10-23T23:24+02:00"
   }
  ]
 }
