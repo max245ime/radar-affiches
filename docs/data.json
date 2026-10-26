@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T14:01+01:00",
+ "updated": "2026-10-26T21:28+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -22,7 +22,7 @@
     "is_today": false
    },
    "week_start": "2026-10-21",
-   "next_week_published": false,
+   "next_week_published": true,
    "films_now": [
     {
      "film_id": "17501",
@@ -116,7 +116,7 @@
      "url": "https://www.ugc.fr/film_le_fantome_de_l_opera_17492.html"
     }
    ],
-   "films_total": 47,
+   "films_total": 49,
    "detections": [
     {
      "film_id": "17879",
@@ -143,6 +143,18 @@
      "detected": "2026-10-19T22:35+02:00"
     },
     {
+     "film_id": "18235",
+     "title": "HEART OF THE BEAST",
+     "url": "https://www.ugc.fr/film_heart_of_the_beast_18235.html",
+     "poster": "https://www.ugc.fr/dynamique/films/35/18235/fr/poster/large/6faf7d9aa879bd9374e773f31db44956_18.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 4,
+     "last": "2026-10-27 18:00",
+     "leaves": "2026-10-28",
+     "detected": "2026-10-26T21:28+01:00"
+    },
+    {
      "film_id": "18037",
      "title": "LA MAISON DE NOS REVES",
      "url": "https://www.ugc.fr/film_la_maison_de_nos_reves_18037.html",
@@ -155,6 +167,18 @@
      "detected": "2026-10-19T22:35+02:00"
     },
     {
+     "film_id": "17712",
+     "title": "MALFAISANTE",
+     "url": "https://www.ugc.fr/film_malfaisante_17712.html",
+     "poster": "https://www.ugc.fr/dynamique/films/12/17712/fr/poster/large/9ec5c971224bc443153c1a8da6c73e07_17.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 7,
+     "last": "2026-10-27 20:15",
+     "leaves": "2026-10-28",
+     "detected": "2026-10-26T21:28+01:00"
+    },
+    {
      "film_id": "18062",
      "title": "NI VUE, NI CONNUE",
      "url": "https://www.ugc.fr/film_ni_vue_ni_connue_18062.html",
@@ -165,6 +189,18 @@
      "last": "2026-10-20 20:20",
      "leaves": "2026-10-21",
      "detected": "2026-10-19T22:35+02:00"
+    },
+    {
+     "film_id": "17764",
+     "title": "THE SOCIAL RECKONING",
+     "url": "https://www.ugc.fr/film_the_social_reckoning_17764.html",
+     "poster": "https://www.ugc.fr/dynamique/films/64/17764/fr/poster/large/9e553042ac8f31f580cb0540fae60dc4_9.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 7,
+     "last": "2026-10-27 20:30",
+     "leaves": "2026-10-28",
+     "detected": "2026-10-26T21:28+01:00"
     },
     {
      "film_id": "17873",
@@ -191,6 +227,18 @@
      "detected": "2026-10-19T22:35+02:00"
     },
     {
+     "film_id": "10299",
+     "title": "HUNGER GAMES - LA REVOLTE : PARTIE 1",
+     "url": "https://www.ugc.fr/film_hunger_games_la_revolte_partie_1_10299.html",
+     "poster": "https://www.ugc.fr/dynamique/films/99/10299/fr/poster/large/595e2c4249c13746be04d6f3f2b452e9_11.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-25 17:30",
+     "leaves": "2026-10-28",
+     "detected": "2026-10-26T21:28+01:00"
+    },
+    {
      "film_id": "9754",
      "title": "HUNGER GAMES : L'EMBRASEMENT",
      "url": "https://www.ugc.fr/film_hunger_games_l_embrasement_9754.html",
@@ -201,6 +249,30 @@
      "last": "2026-10-18 17:30",
      "leaves": "2026-10-21",
      "detected": "2026-10-19T22:35+02:00"
+    },
+    {
+     "film_id": "9706",
+     "title": "LE REVE DE GALILEO",
+     "url": "https://www.ugc.fr/film_le_reve_de_galileo_9706.html",
+     "poster": "https://www.ugc.fr/dynamique/films/06/9706/fr/poster/large/19801748_7.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-25 11:00",
+     "leaves": "2026-10-28",
+     "detected": "2026-10-26T21:28+01:00"
+    },
+    {
+     "film_id": "18514",
+     "title": "LES DIABLES",
+     "url": "https://www.ugc.fr/film_les_diables_18514.html",
+     "poster": "https://www.ugc.fr/dynamique/films/14/18514/fr/poster/large/0d4f80be79d8f26ce29017c0063fde0f_8.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-22 20:30",
+     "leaves": "2026-10-28",
+     "detected": "2026-10-26T21:28+01:00"
     },
     {
      "film_id": "9124",
@@ -227,7 +299,7 @@
      "detected": "2026-10-19T22:35+02:00"
     }
    ],
-   "last_ok": "2026-10-26T14:01+01:00"
+   "last_ok": "2026-10-26T21:28+01:00"
   }
  ]
 }
