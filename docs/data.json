@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T01:58+01:00",
+ "updated": "2026-10-30T13:54+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -102,7 +102,7 @@
      "url": "https://www.ugc.fr/film_un_bon_patron_17832.html"
     }
    ],
-   "films_total": 50,
+   "films_total": 51,
    "detections": [
     {
      "film_id": "18235",
@@ -177,7 +177,7 @@
      "detected": "2026-10-26T21:28+01:00"
     }
    ],
-   "last_ok": "2026-10-30T01:58+01:00"
+   "last_ok": "2026-10-30T13:54+01:00"
   }
  ]
 }
