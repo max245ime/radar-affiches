@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T01:44+01:00",
+ "updated": "2026-11-02T16:49+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -98,11 +98,11 @@
      "film_id": "17832",
      "title": "UN BON PATRON",
      "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/32/17832/fr/poster/large/e0fa1b691ed74bcdc54a9761aa33dbb4_6.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/32/17832/fr/poster/large/e0fa1b691ed74bcdc54a9761aa33dbb4_8.jpg",
      "url": "https://www.ugc.fr/film_un_bon_patron_17832.html"
     }
    ],
-   "films_total": 51,
+   "films_total": 53,
    "detections": [
     {
      "film_id": "18235",
@@ -177,7 +177,7 @@
      "detected": "2026-10-26T21:28+01:00"
     }
    ],
-   "last_ok": "2026-11-02T01:44+01:00"
+   "last_ok": "2026-11-02T16:49+01:00"
   }
  ]
 }
