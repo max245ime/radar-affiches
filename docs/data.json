@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T16:49+01:00",
+ "updated": "2026-11-03T01:57+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -19,10 +19,10 @@
     "day": "mardi",
     "start": "14:00",
     "end": "16:00",
-    "is_today": false
+    "is_today": true
    },
    "week_start": "2026-10-28",
-   "next_week_published": false,
+   "next_week_published": true,
    "films_now": [
     {
      "film_id": "18361",
@@ -102,7 +102,7 @@
      "url": "https://www.ugc.fr/film_un_bon_patron_17832.html"
     }
    ],
-   "films_total": 53,
+   "films_total": 54,
    "detections": [
     {
      "film_id": "18235",
@@ -129,6 +129,18 @@
      "detected": "2026-10-26T21:28+01:00"
     },
     {
+     "film_id": "18173",
+     "title": "NOTRE SALUT",
+     "url": "https://www.ugc.fr/film_notre_salut_18173.html",
+     "poster": "https://www.ugc.fr/dynamique/films/73/18173/fr/poster/large/b7acc48dac20e8329866a199e0ff78e8_23.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 2,
+     "last": "2026-11-03 14:15",
+     "leaves": "2026-11-04",
+     "detected": "2026-11-03T01:57+01:00"
+    },
+    {
      "film_id": "17764",
      "title": "THE SOCIAL RECKONING",
      "url": "https://www.ugc.fr/film_the_social_reckoning_17764.html",
@@ -141,6 +153,18 @@
      "detected": "2026-10-26T21:28+01:00"
     },
     {
+     "film_id": "7793",
+     "title": "CORALINE",
+     "url": "https://www.ugc.fr/film_coraline_7793.html",
+     "poster": "https://www.ugc.fr/dynamique/films/93/7793/fr/poster/large/0359631e56573f4ffb6c3614cfc95998_12.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-10-29 20:30",
+     "leaves": "2026-11-04",
+     "detected": "2026-11-03T01:57+01:00"
+    },
+    {
      "film_id": "10299",
      "title": "HUNGER GAMES - LA REVOLTE : PARTIE 1",
      "url": "https://www.ugc.fr/film_hunger_games_la_revolte_partie_1_10299.html",
@@ -151,6 +175,18 @@
      "last": "2026-10-25 17:30",
      "leaves": "2026-10-28",
      "detected": "2026-10-26T21:28+01:00"
+    },
+    {
+     "film_id": "10770",
+     "title": "HUNGER GAMES - LA REVOLTE : PARTIE 2",
+     "url": "https://www.ugc.fr/film_hunger_games_la_revolte_partie_2_10770.html",
+     "poster": "https://www.ugc.fr/dynamique/films/70/10770/fr/poster/large/620f0ffa8f7e08d590b5b973411af6ee_898.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-01 17:30",
+     "leaves": "2026-11-04",
+     "detected": "2026-11-03T01:57+01:00"
     },
     {
      "film_id": "9706",
@@ -177,7 +213,7 @@
      "detected": "2026-10-26T21:28+01:00"
     }
    ],
-   "last_ok": "2026-11-02T16:49+01:00"
+   "last_ok": "2026-11-03T01:57+01:00"
   }
  ]
 }
