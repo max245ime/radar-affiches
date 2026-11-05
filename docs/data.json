@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T15:38+01:00",
+ "updated": "2026-11-05T22:28+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -69,7 +69,7 @@
     {
      "film_id": "17499",
      "title": "L'ÎLE DES SOUVENIRS",
-     "sessions": 7,
+     "sessions": 6,
      "poster": "https://www.ugc.fr/dynamique/films/99/17499/fr/poster/large/567e74d867a1c88b20897c5d7f92d4dd_37.jpg",
      "url": "https://www.ugc.fr/film_l_ile_des_souvenirs_17499.html"
     },
@@ -116,7 +116,7 @@
      "url": "https://www.ugc.fr/film_le_cygne_et_l_enfant_18625.html"
     }
    ],
-   "films_total": 54,
+   "films_total": 55,
    "detections": [
     {
      "film_id": "18173",
@@ -155,7 +155,7 @@
      "detected": "2026-11-03T01:57+01:00"
     }
    ],
-   "last_ok": "2026-11-05T15:38+01:00"
+   "last_ok": "2026-11-05T22:28+01:00"
   }
  ]
 }
