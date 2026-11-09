@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T01:54+01:00",
+ "updated": "2026-11-09T17:17+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -22,7 +22,7 @@
     "is_today": false
    },
    "week_start": "2026-11-04",
-   "next_week_published": false,
+   "next_week_published": true,
    "films_now": [
     {
      "film_id": "18361",
@@ -116,8 +116,20 @@
      "url": "https://www.ugc.fr/film_le_cygne_et_l_enfant_18625.html"
     }
    ],
-   "films_total": 55,
+   "films_total": 60,
    "detections": [
+    {
+     "film_id": "17951",
+     "title": "MOCHY",
+     "url": "https://www.ugc.fr/film_mochy_17951.html",
+     "poster": "https://www.ugc.fr/dynamique/films/51/17951/fr/poster/large/2e292d36aa0d7fc0efb2e1d08578357d_21.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 4,
+     "last": "2026-11-08 10:40",
+     "leaves": "2026-11-11",
+     "detected": "2026-11-09T17:17+01:00"
+    },
     {
      "film_id": "18173",
      "title": "NOTRE SALUT",
@@ -153,9 +165,57 @@
      "last": "2026-11-01 17:30",
      "leaves": "2026-11-04",
      "detected": "2026-11-03T01:57+01:00"
+    },
+    {
+     "film_id": "15332",
+     "title": "HUNGER GAMES: LA BALLADE DU SERPENT ET DE L'OISEAU CHANTEUR",
+     "url": "https://www.ugc.fr/film_hunger_games_la_ballade_du_serpent_et_de_l_oiseau_chanteur_15332.html",
+     "poster": "https://www.ugc.fr/dynamique/films/32/15332/fr/poster/large/83fdacdaceb7e25b257d44bef7f6d133_27.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-08 17:30",
+     "leaves": "2026-11-11",
+     "detected": "2026-11-09T17:17+01:00"
+    },
+    {
+     "film_id": "18557",
+     "title": "LA PLANETE DES SINGES",
+     "url": "https://www.ugc.fr/film_la_planete_des_singes_18557.html",
+     "poster": "https://www.ugc.fr/dynamique/films/57/18557/fr/poster/large/145009_0.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-06 20:00",
+     "leaves": "2026-11-11",
+     "detected": "2026-11-09T17:17+01:00"
+    },
+    {
+     "film_id": "18625",
+     "title": "LE CYGNE ET L'ENFANT",
+     "url": "https://www.ugc.fr/film_le_cygne_et_l_enfant_18625.html",
+     "poster": "https://www.ugc.fr/dynamique/films/25/18625/fr/poster/large/b9ddaa36d65452afbc94547d8202dc92_0.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-08 11:00",
+     "leaves": "2026-11-11",
+     "detected": "2026-11-09T17:17+01:00"
+    },
+    {
+     "film_id": "4961",
+     "title": "SAFE",
+     "url": "https://www.ugc.fr/film_safe_4961.html",
+     "poster": "https://www.ugc.fr/dynamique/films/61/4961/fr/poster/large/1dfed9d7867585bb7dd807c63d9382a4_5.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-05 20:15",
+     "leaves": "2026-11-11",
+     "detected": "2026-11-09T17:17+01:00"
     }
    ],
-   "last_ok": "2026-11-09T01:54+01:00"
+   "last_ok": "2026-11-09T17:17+01:00"
   }
  ]
 }
