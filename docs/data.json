@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T02:01+01:00",
+ "updated": "2026-11-16T16:44+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -151,7 +151,7 @@
      "url": "https://www.ugc.fr/film_dune_deuxieme_partie_15359.html"
     }
    ],
-   "films_total": 63,
+   "films_total": 65,
    "detections": [
     {
      "film_id": "17493",
@@ -174,30 +174,6 @@
      "reason": "Absent de la programmation de la semaine suivante.",
      "sessions_prev": 7,
      "last": "2026-11-17 17:20",
-     "leaves": "2026-11-18",
-     "detected": "2026-11-11T15:21+01:00"
-    },
-    {
-     "film_id": "17968",
-     "title": "IL FAUT BRULER MAMAN",
-     "url": "https://www.ugc.fr/film_il_faut_bruler_maman_17968.html",
-     "poster": "https://www.ugc.fr/dynamique/films/68/17968/fr/poster/large/b722617d1263956a4b556c739a49afc3_4.jpg",
-     "status": "🟠",
-     "reason": "Absent de la programmation de la semaine suivante.",
-     "sessions_prev": 23,
-     "last": "2026-11-17 20:00",
-     "leaves": "2026-11-18",
-     "detected": "2026-11-11T15:21+01:00"
-    },
-    {
-     "film_id": "17498",
-     "title": "KARMA",
-     "url": "https://www.ugc.fr/film_karma_17498.html",
-     "poster": "https://www.ugc.fr/dynamique/films/98/17498/fr/poster/large/940afff3ed3b09677bf94e2bc7c3009b_27.jpg",
-     "status": "🟠",
-     "reason": "Absent de la programmation de la semaine suivante.",
-     "sessions_prev": 7,
-     "last": "2026-11-17 16:30",
      "leaves": "2026-11-18",
      "detected": "2026-11-11T15:21+01:00"
     },
@@ -262,18 +238,6 @@
      "detected": "2026-11-09T17:17+01:00"
     },
     {
-     "film_id": "18361",
-     "title": "MOULIN",
-     "url": "https://www.ugc.fr/film_moulin_18361.html",
-     "poster": "https://www.ugc.fr/dynamique/films/61/18361/fr/poster/large/0f7fb216155bf7bcf7bb69d9e2f65310_16.jpg",
-     "status": "🟠",
-     "reason": "Absent de la programmation de la semaine suivante.",
-     "sessions_prev": 20,
-     "last": "2026-11-17 20:00",
-     "leaves": "2026-11-18",
-     "detected": "2026-11-11T15:21+01:00"
-    },
-    {
      "film_id": "18529",
      "title": "PAPA OÙ T'ES ?",
      "url": "https://www.ugc.fr/film_papa_ou_t_es__18529.html",
@@ -282,30 +246,6 @@
      "reason": "Absent de la programmation de la semaine suivante.",
      "sessions_prev": 4,
      "last": "2026-11-17 13:45",
-     "leaves": "2026-11-18",
-     "detected": "2026-11-11T15:21+01:00"
-    },
-    {
-     "film_id": "17801",
-     "title": "SCROOGE",
-     "url": "https://www.ugc.fr/film_scrooge_17801.html",
-     "poster": "https://www.ugc.fr/dynamique/films/01/17801/fr/poster/large/ee1d9a9f275b9d7332cf8dff0c5dfd27_11.jpg",
-     "status": "🟠",
-     "reason": "Absent de la programmation de la semaine suivante.",
-     "sessions_prev": 23,
-     "last": "2026-11-17 20:30",
-     "leaves": "2026-11-18",
-     "detected": "2026-11-11T15:21+01:00"
-    },
-    {
-     "film_id": "17800",
-     "title": "SHAUN LE MOUTON : LA BEEETE D'HALLOWEEN",
-     "url": "https://www.ugc.fr/film_shaun_le_mouton_la_beeete_d_halloween_17800.html",
-     "poster": "https://www.ugc.fr/dynamique/films/00/17800/fr/poster/large/4fda4090f417ac9b0e78ccc48f43ea2c_21.jpg",
-     "status": "🟠",
-     "reason": "Absent de la programmation de la semaine suivante.",
-     "sessions_prev": 4,
-     "last": "2026-11-15 15:20",
      "leaves": "2026-11-18",
      "detected": "2026-11-11T15:21+01:00"
     },
@@ -330,18 +270,6 @@
      "reason": "Séance unique la semaine passée : événement probable.",
      "sessions_prev": 1,
      "last": "2026-11-12 19:00",
-     "leaves": "2026-11-18",
-     "detected": "2026-11-11T15:21+01:00"
-    },
-    {
-     "film_id": "17929",
-     "title": "CAMEMBERT",
-     "url": "https://www.ugc.fr/film_camembert_17929.html",
-     "poster": "https://www.ugc.fr/dynamique/films/29/17929/fr/poster/large/de019123ff2a620ecfc2c45bc743ab01_15.jpg",
-     "status": "⚪",
-     "reason": "Séance unique la semaine passée : événement probable.",
-     "sessions_prev": 1,
-     "last": "2026-11-15 18:00",
      "leaves": "2026-11-18",
      "detected": "2026-11-11T15:21+01:00"
     },
@@ -430,7 +358,7 @@
      "detected": "2026-11-09T17:17+01:00"
     }
    ],
-   "last_ok": "2026-11-16T02:01+01:00"
+   "last_ok": "2026-11-16T16:44+01:00"
   }
  ]
 }
