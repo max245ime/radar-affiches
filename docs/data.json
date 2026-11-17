@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T16:44+01:00",
+ "updated": "2026-11-17T02:51+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -19,7 +19,7 @@
     "day": "mardi",
     "start": "14:00",
     "end": "16:00",
-    "is_today": false
+    "is_today": true
    },
    "week_start": "2026-11-11",
    "next_week_published": true,
@@ -133,7 +133,7 @@
      "film_id": "17929",
      "title": "CAMEMBERT",
      "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/29/17929/fr/poster/large/de019123ff2a620ecfc2c45bc743ab01_16.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/29/17929/fr/poster/large/de019123ff2a620ecfc2c45bc743ab01_17.jpg",
      "url": "https://www.ugc.fr/film_camembert_17929.html"
     },
     {
@@ -358,7 +358,7 @@
      "detected": "2026-11-09T17:17+01:00"
     }
    ],
-   "last_ok": "2026-11-16T16:44+01:00"
+   "last_ok": "2026-11-17T02:51+01:00"
   }
  ]
 }
