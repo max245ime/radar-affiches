@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T16:58+01:00",
+ "updated": "2026-11-18T01:57+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -15,140 +15,105 @@
    ],
    "pickup_text": "mardi 14h–16h",
    "next_pickup": {
-    "date": "2026-11-17",
+    "date": "2026-11-24",
     "day": "mardi",
     "start": "14:00",
     "end": "16:00",
-    "is_today": true
+    "is_today": false
    },
-   "week_start": "2026-11-11",
-   "next_week_published": true,
+   "week_start": "2026-11-18",
+   "next_week_published": false,
    "films_now": [
     {
-     "film_id": "17968",
-     "title": "IL FAUT BRULER MAMAN",
-     "sessions": 23,
-     "poster": "https://www.ugc.fr/dynamique/films/68/17968/fr/poster/large/b722617d1263956a4b556c739a49afc3_4.jpg",
-     "url": "https://www.ugc.fr/film_il_faut_bruler_maman_17968.html"
+     "film_id": "17601",
+     "title": "HUNGER GAMES : LEVER DE SOLEIL SUR LA MOISSON",
+     "sessions": 22,
+     "poster": "https://www.ugc.fr/dynamique/films/01/17601/fr/poster/large/f124e39fa139536fceb9005cab53fc04_26.jpg",
+     "url": "https://www.ugc.fr/film_hunger_games_lever_de_soleil_sur_la_moisson_17601.html"
     },
     {
      "film_id": "17801",
      "title": "SCROOGE",
-     "sessions": 23,
+     "sessions": 22,
      "poster": "https://www.ugc.fr/dynamique/films/01/17801/fr/poster/large/ee1d9a9f275b9d7332cf8dff0c5dfd27_11.jpg",
      "url": "https://www.ugc.fr/film_scrooge_17801.html"
     },
     {
-     "film_id": "18361",
-     "title": "MOULIN",
-     "sessions": 20,
-     "poster": "https://www.ugc.fr/dynamique/films/61/18361/fr/poster/large/0f7fb216155bf7bcf7bb69d9e2f65310_16.jpg",
-     "url": "https://www.ugc.fr/film_moulin_18361.html"
-    },
-    {
-     "film_id": "17832",
-     "title": "UN BON PATRON",
-     "sessions": 18,
-     "poster": "https://www.ugc.fr/dynamique/films/32/17832/fr/poster/large/e0fa1b691ed74bcdc54a9761aa33dbb4_8.jpg",
-     "url": "https://www.ugc.fr/film_un_bon_patron_17832.html"
-    },
-    {
-     "film_id": "17747",
-     "title": "LE CORSET",
-     "sessions": 7,
-     "poster": "https://www.ugc.fr/dynamique/films/47/17747/fr/poster/large/a796a67caa5bdab1508d9207abaf5284_31.jpg",
-     "url": "https://www.ugc.fr/film_le_corset_17747.html"
-    },
-    {
-     "film_id": "17498",
-     "title": "KARMA",
-     "sessions": 7,
-     "poster": "https://www.ugc.fr/dynamique/films/98/17498/fr/poster/large/940afff3ed3b09677bf94e2bc7c3009b_27.jpg",
-     "url": "https://www.ugc.fr/film_karma_17498.html"
-    },
-    {
-     "film_id": "17501",
-     "title": "LES MISÉRABLES",
-     "sessions": 7,
-     "poster": "https://www.ugc.fr/dynamique/films/01/17501/fr/poster/large/5a4186d62d534f2da65c2e9e8e822a34_20.jpg",
-     "url": "https://www.ugc.fr/film_les_miserables_17501.html"
-    },
-    {
-     "film_id": "18237",
-     "title": "HOPE",
-     "sessions": 7,
-     "poster": "https://www.ugc.fr/dynamique/films/37/18237/fr/poster/large/37eb88a0ce51e0295cac6fca4884a609_23.jpg",
-     "url": "https://www.ugc.fr/film_hope_18237.html"
-    },
-    {
-     "film_id": "17492",
-     "title": "LE FANTOME DE L'OPERA",
-     "sessions": 5,
-     "poster": "https://www.ugc.fr/dynamique/films/92/17492/fr/poster/large/9e85825c32a9d2be8135074c9e45c870_16.jpg",
-     "url": "https://www.ugc.fr/film_le_fantome_de_l_opera_17492.html"
-    },
-    {
-     "film_id": "17499",
-     "title": "L'ÎLE DES SOUVENIRS",
-     "sessions": 4,
-     "poster": "https://www.ugc.fr/dynamique/films/99/17499/fr/poster/large/567e74d867a1c88b20897c5d7f92d4dd_37.jpg",
-     "url": "https://www.ugc.fr/film_l_ile_des_souvenirs_17499.html"
-    },
-    {
-     "film_id": "17800",
-     "title": "SHAUN LE MOUTON : LA BEEETE D'HALLOWEEN",
-     "sessions": 4,
-     "poster": "https://www.ugc.fr/dynamique/films/00/17800/fr/poster/large/4fda4090f417ac9b0e78ccc48f43ea2c_21.jpg",
-     "url": "https://www.ugc.fr/film_shaun_le_mouton_la_beeete_d_halloween_17800.html"
-    },
-    {
-     "film_id": "18529",
-     "title": "PAPA OÙ T'ES ?",
-     "sessions": 4,
-     "poster": "https://www.ugc.fr/dynamique/films/29/18529/fr/poster/large/2d5be7939e2b342391de951db5694ca7_12.jpg",
-     "url": "https://www.ugc.fr/film_papa_ou_t_es__18529.html"
-    },
-    {
-     "film_id": "17493",
-     "title": "DUCOBU ET LE FANTOME DE SAINT POTACHE",
-     "sessions": 2,
-     "poster": "https://www.ugc.fr/dynamique/films/93/17493/fr/poster/large/54167f9b523fff67b07b2e80f5f9dd71_18.jpg",
-     "url": "https://www.ugc.fr/film_ducobu_et_le_fantome_de_saint_potache_17493.html"
-    },
-    {
-     "film_id": "16",
-     "title": "37.2 LE MATIN - L'INTEGRALE",
-     "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/16/16/fr/poster/large/19048906_2.jpg",
-     "url": "https://www.ugc.fr/film_37_2_le_matin_version_integrale_16.html"
-    },
-    {
-     "film_id": "14046",
-     "title": "DUNE",
-     "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/46/14046/fr/poster/large/4633954_38.jpg",
-     "url": "https://www.ugc.fr/film_dune_14046.html"
-    },
-    {
      "film_id": "17929",
      "title": "CAMEMBERT",
-     "sessions": 1,
+     "sessions": 22,
      "poster": "https://www.ugc.fr/dynamique/films/29/17929/fr/poster/large/de019123ff2a620ecfc2c45bc743ab01_17.jpg",
      "url": "https://www.ugc.fr/film_camembert_17929.html"
     },
     {
-     "film_id": "18248",
-     "title": "LE MONDE A L'ENVERS",
-     "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/48/18248/fr/poster/large/695460e78e996175a81de234a0603f87_1.jpg",
-     "url": "https://www.ugc.fr/film_le_monde_a_l_envers_18248.html"
+     "film_id": "17968",
+     "title": "IL FAUT BRULER MAMAN",
+     "sessions": 21,
+     "poster": "https://www.ugc.fr/dynamique/films/68/17968/fr/poster/large/b722617d1263956a4b556c739a49afc3_4.jpg",
+     "url": "https://www.ugc.fr/film_il_faut_bruler_maman_17968.html"
     },
     {
-     "film_id": "15359",
-     "title": "DUNE : DEUXIÈME PARTIE",
+     "film_id": "17967",
+     "title": "L'AFFAIRE MARIE-CLAIRE",
+     "sessions": 14,
+     "poster": "https://www.ugc.fr/dynamique/films/67/17967/fr/poster/large/4a3cf95bb345d5d71bdc7acf3430323b_15.jpg",
+     "url": "https://www.ugc.fr/film_l_affaire_marie_claire_17967.html"
+    },
+    {
+     "film_id": "18024",
+     "title": "WILD HORSE NINE",
+     "sessions": 13,
+     "poster": "https://www.ugc.fr/dynamique/films/24/18024/fr/poster/large/192c21b88207a32bb9c1a043c51f053b_28.jpg",
+     "url": "https://www.ugc.fr/film_wild_horse_nine_18024.html"
+    },
+    {
+     "film_id": "18361",
+     "title": "MOULIN",
+     "sessions": 6,
+     "poster": "https://www.ugc.fr/dynamique/films/61/18361/fr/poster/large/0f7fb216155bf7bcf7bb69d9e2f65310_16.jpg",
+     "url": "https://www.ugc.fr/film_moulin_18361.html"
+    },
+    {
+     "film_id": "17498",
+     "title": "KARMA",
+     "sessions": 4,
+     "poster": "https://www.ugc.fr/dynamique/films/98/17498/fr/poster/large/940afff3ed3b09677bf94e2bc7c3009b_27.jpg",
+     "url": "https://www.ugc.fr/film_karma_17498.html"
+    },
+    {
+     "film_id": "17800",
+     "title": "SHAUN LE MOUTON : LA BEEETE D'HALLOWEEN",
+     "sessions": 3,
+     "poster": "https://www.ugc.fr/dynamique/films/00/17800/fr/poster/large/4fda4090f417ac9b0e78ccc48f43ea2c_21.jpg",
+     "url": "https://www.ugc.fr/film_shaun_le_mouton_la_beeete_d_halloween_17800.html"
+    },
+    {
+     "film_id": "6393",
+     "title": "MARIE ANTOINETTE",
      "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/59/15359/fr/poster/large/5392835_48.jpg",
-     "url": "https://www.ugc.fr/film_dune_deuxieme_partie_15359.html"
+     "poster": "https://www.ugc.fr/dynamique/films/93/6393/fr/poster/large/18612764_5.jpg",
+     "url": "https://www.ugc.fr/film_marie_antoinette_6393.html"
+    },
+    {
+     "film_id": "17495",
+     "title": "ASTERIX - LE ROYAUME DE NUBIE",
+     "sessions": 1,
+     "poster": "https://www.ugc.fr/dynamique/films/95/17495/fr/poster/large/5d822abd6caebdff0b065a16e93b7f76_23.jpg",
+     "url": "https://www.ugc.fr/film_asterix_le_royaume_de_nubie_17495.html"
+    },
+    {
+     "film_id": "18236",
+     "title": "JOYEUSE JUNGLE !",
+     "sessions": 1,
+     "poster": "https://www.ugc.fr/dynamique/films/36/18236/fr/poster/large/e86c9876fe8dc5abacfaacbd1bcd1cb3_8.jpg",
+     "url": "https://www.ugc.fr/film_joyeuse_jungle__18236.html"
+    },
+    {
+     "film_id": "15656",
+     "title": "SI TU TENDS L'OREILLE",
+     "sessions": 1,
+     "poster": "https://www.ugc.fr/dynamique/films/56/15656/fr/poster/large/f25038579f01cc4535859388b6048558_17.jpg",
+     "url": "https://www.ugc.fr/film_si_tu_tends_l_oreille_15656.html"
     }
    ],
    "films_total": 66,
@@ -226,18 +191,6 @@
      "detected": "2026-11-11T15:21+01:00"
     },
     {
-     "film_id": "17951",
-     "title": "MOCHY",
-     "url": "https://www.ugc.fr/film_mochy_17951.html",
-     "poster": "https://www.ugc.fr/dynamique/films/51/17951/fr/poster/large/2e292d36aa0d7fc0efb2e1d08578357d_21.jpg",
-     "status": "🟠",
-     "reason": "Absent de la programmation de la semaine suivante.",
-     "sessions_prev": 4,
-     "last": "2026-11-08 10:40",
-     "leaves": "2026-11-11",
-     "detected": "2026-11-09T17:17+01:00"
-    },
-    {
      "film_id": "18529",
      "title": "PAPA OÙ T'ES ?",
      "url": "https://www.ugc.fr/film_papa_ou_t_es__18529.html",
@@ -298,42 +251,6 @@
      "detected": "2026-11-11T15:21+01:00"
     },
     {
-     "film_id": "15332",
-     "title": "HUNGER GAMES: LA BALLADE DU SERPENT ET DE L'OISEAU CHANTEUR",
-     "url": "https://www.ugc.fr/film_hunger_games_la_ballade_du_serpent_et_de_l_oiseau_chanteur_15332.html",
-     "poster": "https://www.ugc.fr/dynamique/films/32/15332/fr/poster/large/83fdacdaceb7e25b257d44bef7f6d133_27.jpg",
-     "status": "⚪",
-     "reason": "Séance unique la semaine passée : événement probable.",
-     "sessions_prev": 1,
-     "last": "2026-11-08 17:30",
-     "leaves": "2026-11-11",
-     "detected": "2026-11-09T17:17+01:00"
-    },
-    {
-     "film_id": "18557",
-     "title": "LA PLANETE DES SINGES",
-     "url": "https://www.ugc.fr/film_la_planete_des_singes_18557.html",
-     "poster": "https://www.ugc.fr/dynamique/films/57/18557/fr/poster/large/145009_0.jpg",
-     "status": "⚪",
-     "reason": "Séance unique la semaine passée : événement probable.",
-     "sessions_prev": 1,
-     "last": "2026-11-06 20:00",
-     "leaves": "2026-11-11",
-     "detected": "2026-11-09T17:17+01:00"
-    },
-    {
-     "film_id": "18625",
-     "title": "LE CYGNE ET L'ENFANT",
-     "url": "https://www.ugc.fr/film_le_cygne_et_l_enfant_18625.html",
-     "poster": "https://www.ugc.fr/dynamique/films/25/18625/fr/poster/large/b9ddaa36d65452afbc94547d8202dc92_0.jpg",
-     "status": "⚪",
-     "reason": "Séance unique la semaine passée : événement probable.",
-     "sessions_prev": 1,
-     "last": "2026-11-08 11:00",
-     "leaves": "2026-11-11",
-     "detected": "2026-11-09T17:17+01:00"
-    },
-    {
      "film_id": "18248",
      "title": "LE MONDE A L'ENVERS",
      "url": "https://www.ugc.fr/film_le_monde_a_l_envers_18248.html",
@@ -344,21 +261,9 @@
      "last": "2026-11-15 11:00",
      "leaves": "2026-11-18",
      "detected": "2026-11-11T15:21+01:00"
-    },
-    {
-     "film_id": "4961",
-     "title": "SAFE",
-     "url": "https://www.ugc.fr/film_safe_4961.html",
-     "poster": "https://www.ugc.fr/dynamique/films/61/4961/fr/poster/large/1dfed9d7867585bb7dd807c63d9382a4_5.jpg",
-     "status": "⚪",
-     "reason": "Séance unique la semaine passée : événement probable.",
-     "sessions_prev": 1,
-     "last": "2026-11-05 20:15",
-     "leaves": "2026-11-11",
-     "detected": "2026-11-09T17:17+01:00"
     }
    ],
-   "last_ok": "2026-11-17T16:58+01:00"
+   "last_ok": "2026-11-18T01:57+01:00"
   }
  ]
 }
