@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T02:41+01:00",
+ "updated": "2026-11-23T19:06+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -22,7 +22,7 @@
     "is_today": false
    },
    "week_start": "2026-11-18",
-   "next_week_published": false,
+   "next_week_published": true,
    "films_now": [
     {
      "film_id": "17601",
@@ -116,7 +116,7 @@
      "url": "https://www.ugc.fr/film_si_tu_tends_l_oreille_15656.html"
     }
    ],
-   "films_total": 71,
+   "films_total": 73,
    "detections": [
     {
      "film_id": "17493",
@@ -141,6 +141,30 @@
      "last": "2026-11-17 17:20",
      "leaves": "2026-11-18",
      "detected": "2026-11-11T15:21+01:00"
+    },
+    {
+     "film_id": "17498",
+     "title": "KARMA",
+     "url": "https://www.ugc.fr/film_karma_17498.html",
+     "poster": "https://www.ugc.fr/dynamique/films/98/17498/fr/poster/large/940afff3ed3b09677bf94e2bc7c3009b_27.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 4,
+     "last": "2026-11-24 13:20",
+     "leaves": "2026-11-25",
+     "detected": "2026-11-23T19:06+01:00"
+    },
+    {
+     "film_id": "17967",
+     "title": "L'AFFAIRE MARIE-CLAIRE",
+     "url": "https://www.ugc.fr/film_l_affaire_marie_claire_17967.html",
+     "poster": "https://www.ugc.fr/dynamique/films/67/17967/fr/poster/large/4a3cf95bb345d5d71bdc7acf3430323b_15.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 14,
+     "last": "2026-11-24 20:40",
+     "leaves": "2026-11-25",
+     "detected": "2026-11-23T19:06+01:00"
     },
     {
      "film_id": "17499",
@@ -203,6 +227,18 @@
      "detected": "2026-11-11T15:21+01:00"
     },
     {
+     "film_id": "17800",
+     "title": "SHAUN LE MOUTON : LA BEEETE D'HALLOWEEN",
+     "url": "https://www.ugc.fr/film_shaun_le_mouton_la_beeete_d_halloween_17800.html",
+     "poster": "https://www.ugc.fr/dynamique/films/00/17800/fr/poster/large/4fda4090f417ac9b0e78ccc48f43ea2c_21.jpg",
+     "status": "🟠",
+     "reason": "Absent de la programmation de la semaine suivante.",
+     "sessions_prev": 3,
+     "last": "2026-11-22 11:15",
+     "leaves": "2026-11-25",
+     "detected": "2026-11-23T19:06+01:00"
+    },
+    {
      "film_id": "17832",
      "title": "UN BON PATRON",
      "url": "https://www.ugc.fr/film_un_bon_patron_17832.html",
@@ -225,6 +261,18 @@
      "last": "2026-11-12 19:00",
      "leaves": "2026-11-18",
      "detected": "2026-11-11T15:21+01:00"
+    },
+    {
+     "film_id": "17495",
+     "title": "ASTERIX - LE ROYAUME DE NUBIE",
+     "url": "https://www.ugc.fr/film_asterix_le_royaume_de_nubie_17495.html",
+     "poster": "https://www.ugc.fr/dynamique/films/95/17495/fr/poster/large/5d822abd6caebdff0b065a16e93b7f76_23.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-22 16:00",
+     "leaves": "2026-11-25",
+     "detected": "2026-11-23T19:06+01:00"
     },
     {
      "film_id": "14046",
@@ -251,6 +299,18 @@
      "detected": "2026-11-11T15:21+01:00"
     },
     {
+     "film_id": "18236",
+     "title": "JOYEUSE JUNGLE !",
+     "url": "https://www.ugc.fr/film_joyeuse_jungle__18236.html",
+     "poster": "https://www.ugc.fr/dynamique/films/36/18236/fr/poster/large/e86c9876fe8dc5abacfaacbd1bcd1cb3_8.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-22 11:00",
+     "leaves": "2026-11-25",
+     "detected": "2026-11-23T19:06+01:00"
+    },
+    {
      "film_id": "18248",
      "title": "LE MONDE A L'ENVERS",
      "url": "https://www.ugc.fr/film_le_monde_a_l_envers_18248.html",
@@ -261,9 +321,33 @@
      "last": "2026-11-15 11:00",
      "leaves": "2026-11-18",
      "detected": "2026-11-11T15:21+01:00"
+    },
+    {
+     "film_id": "6393",
+     "title": "MARIE ANTOINETTE",
+     "url": "https://www.ugc.fr/film_marie_antoinette_6393.html",
+     "poster": "https://www.ugc.fr/dynamique/films/93/6393/fr/poster/large/18612764_5.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-19 20:15",
+     "leaves": "2026-11-25",
+     "detected": "2026-11-23T19:06+01:00"
+    },
+    {
+     "film_id": "15656",
+     "title": "SI TU TENDS L'OREILLE",
+     "url": "https://www.ugc.fr/film_si_tu_tends_l_oreille_15656.html",
+     "poster": "https://www.ugc.fr/dynamique/films/56/15656/fr/poster/large/f25038579f01cc4535859388b6048558_17.jpg",
+     "status": "⚪",
+     "reason": "Séance unique la semaine passée : événement probable.",
+     "sessions_prev": 1,
+     "last": "2026-11-22 17:30",
+     "leaves": "2026-11-25",
+     "detected": "2026-11-23T19:06+01:00"
     }
    ],
-   "last_ok": "2026-11-23T02:41+01:00"
+   "last_ok": "2026-11-23T19:06+01:00"
   }
  ]
 }
