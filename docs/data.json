@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T04:57+01:00",
+ "updated": "2026-11-24T18:43+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -96,9 +96,9 @@
     },
     {
      "film_id": "17495",
-     "title": "ASTERIX - LE ROYAUME DE NUBIE",
+     "title": "ASTERIX : LE ROYAUME DE NUBIE",
      "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/95/17495/fr/poster/large/5d822abd6caebdff0b065a16e93b7f76_23.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/95/17495/fr/poster/large/5d822abd6caebdff0b065a16e93b7f76_24.jpg",
      "url": "https://www.ugc.fr/film_asterix_le_royaume_de_nubie_17495.html"
     },
     {
@@ -347,7 +347,7 @@
      "detected": "2026-11-23T19:06+01:00"
     }
    ],
-   "last_ok": "2026-11-24T04:57+01:00"
+   "last_ok": "2026-11-24T18:43+01:00"
   }
  ]
 }
