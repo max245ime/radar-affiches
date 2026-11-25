@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T03:26+01:00",
+ "updated": "2026-11-25T18:11+01:00",
  "status": "ok",
  "errors": [],
  "cinemas": [
@@ -42,7 +42,7 @@
      "film_id": "17502",
      "title": "MON BEAU-PERE, MA BELLE-FILLE ET MOI",
      "sessions": 22,
-     "poster": "https://www.ugc.fr/dynamique/films/02/17502/fr/poster/large/e7b2d3047feb71205387d7e2b34d02a2_15.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/02/17502/fr/poster/large/e7b2d3047feb71205387d7e2b34d02a2_16.jpg",
      "url": "https://www.ugc.fr/film_mon_beau_pere_ma_belle_fille_et_moi_17502.html"
     },
     {
@@ -91,7 +91,7 @@
      "film_id": "18604",
      "title": "MYSTERIOUS SKIN",
      "sessions": 1,
-     "poster": "https://www.ugc.fr/dynamique/films/04/18604/fr/poster/large/5461365bb260b6a43d115dc0fde2250e_1.jpg",
+     "poster": "https://www.ugc.fr/dynamique/films/04/18604/fr/poster/large/5461365bb260b6a43d115dc0fde2250e_3.jpg",
      "url": "https://www.ugc.fr/film_mysterious_skin_18604.html"
     },
     {
@@ -359,7 +359,7 @@
      "detected": "2026-11-23T19:06+01:00"
     }
    ],
-   "last_ok": "2026-11-25T03:26+01:00"
+   "last_ok": "2026-11-25T18:11+01:00"
   }
  ]
 }
